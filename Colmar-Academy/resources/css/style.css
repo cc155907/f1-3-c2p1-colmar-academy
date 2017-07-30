@@ -1,0 +1,471 @@
+/*div, nav, header {
+  border: 1px solid #ce0000;
+}*/
+
+/*general styling*/
+
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.33rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+header,
+.section-1,
+.section-3,
+.exhibit,
+footer, {
+  background-color: #eee;
+}
+
+.main {
+  position: relative;
+  top: 4rem;
+}
+
+@media only screen and (max-width: 650px) {
+  #large {
+    display: none;
+  }
+
+
+}
+
+/* header code */
+
+header {
+  height: 4rem;
+  width: 100%;
+  max-width: 1260px;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.nav-small {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .nav-normal {
+    display: none;
+  }
+
+  .nav-small {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+
+.colmar {
+  font-weight: 800;
+}
+
+.academy {
+  font-weight: 200;
+}
+
+nav {
+  padding-right: 1.5rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  font-family: helvetica;
+}
+
+#sign-in {
+  margin-right: 0;
+}
+
+/*banner*/
+
+.banner {
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  background-color: #ccc;
+}
+
+.banner .img-container {
+  width: 60%;
+  height: auto;
+  overflow: hidden;
+  margin-right: 2.5rem;
+}
+
+.banner .img-container img {
+  max-width: 100%;
+  height: auto;
+  max-height: 550px;
+  display: block;
+}
+
+.banner .text-container {
+  max-width: 300px;
+  max-height: auto;
+}
+
+@media only screen and (max-width: 650px) {
+  .banner {
+    padding: 0;
+    padding-top: 11.25rem;
+    margin: 0;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .banner .text-container {
+    width: 100%;
+    max-width: inherit;
+    padding: 2rem 1rem;
+    margin: 0;
+    background-color: #aaa;
+  }
+}
+
+.banner-text {
+  margin-top: 1.5rem;
+}
+
+.button {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #555;
+  text-align: center;
+  color: #eee;
+}
+
+/*contains styling for both sections 1 and 3 because of their similarity*/
+
+.section-1,
+.section-3 {
+  display: flex;
+}
+
+.section-1-right {
+  border-left: 1px solid #ccc;
+}
+
+.section-1-left,
+.section-3-left {
+  width: 63%;
+}
+
+.section-1-left .img-container,
+.section-3-left .video-container {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  margin: 2rem 1.5rem;
+}
+
+.section-1-left .img-container img,
+.section-3-left .video-container video {
+  max-width: 100%;
+  max-height: 550px;
+  height: auto;
+  display: block;
+}
+
+.section-1-left .text-container,
+.section-3-left .text-container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+
+
+.section-1-left .text-container h1 {
+  margin-top: 1.5rem;
+}
+
+.section-1-left .text-container .line-space {
+  margin-top: 1.5rem;
+}
+
+#caption {
+  font-size: .75rem;
+}
+
+.section-1-right,
+.section-3-right {
+  width: 37%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container,
+.thesis {
+  width: 100%;
+  height: auto;
+  max-height: 12.5rem;
+  display: flex;
+  align-items: center;
+}
+
+
+.info-container .img-container,
+.thesis .img-container {
+  width: 35%;
+  height: auto;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.info-container .img-container img,
+.thesis .img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+ img#mobile {
+  display: none;
+}
+
+.info-container .text-container,
+.thesis .text-container {
+  width: auto;
+  max-width: 13.625rem; /*This is to fix the third info container. Without this, the third image is smaller than the other images, and the text container overextends.*/
+  height: auto;
+}
+
+.info-container .line-space {
+  margin-top: .5rem;
+}
+
+a.line-space {
+  display: block;
+  color: #24e;
+}
+
+a.line-space:visited {
+  color: #b2f;
+}
+
+.shade {
+  background-color: #ccc;
+}
+
+@media only screen and (max-width: 650px) {
+  .section-1-right {
+    width: 100%;
+  }
+
+  .info-container {
+    width: 100%;
+    max-height: none;
+    flex-direction: column;
+  }
+
+
+.info-container .img-container,
+.info-container .text-container {
+  width: auto;
+}
+
+.info-container .img-container {
+  padding: 1rem;
+}
+
+img#mobile {
+  display: inline;
+}
+
+.info-container .text-container {
+  margin-left: 3rem;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+  .shade {
+    background-color: inherit;
+  }
+}
+
+
+
+/*section 2*/
+
+.section-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: #ccc;
+}
+
+.subject-list {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.subject {
+  max-width: 23%;
+  padding-bottom: 1.5rem;
+  background-color: #fff;
+}
+
+.subject .img-container {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.subject .img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.subject-list-1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.middle {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.subject .text-container {
+  height: auto;
+  padding-top: 16px;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.subject .text-container p {
+  margin-top: .5rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .section-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #fff;
+  }
+
+  .subject-list {
+    flex-direction: column;
+  }
+
+  .subject-list-1 {
+    margin-bottom: 0;
+  }
+
+  .subject,
+  .middle {
+    width: 100%;
+    max-width: none;
+    margin: auto;
+    margin-bottom: 8px;
+    background-color: #ccc;
+  }
+
+  .subject p {
+    display: none;
+  }
+}
+
+/*section 3 only*/
+
+.exhibit {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.exhibit h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-3-left .video-container {
+  margin-top: 0;
+  max-height: none;
+}
+
+.section-3-left .text-container p {
+  margin-top: .5rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .section-3,
+  .section-3-left,
+  .video-container,
+  #mobile-fix {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/*footer*/
+
+footer {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer p {
+  display: inline;
+  font-size: .75rem;
+}
+
+#copyright {
+  margin-left: 1.5rem;
+}
+
+#terms {
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 650px) {
+  footer {
+    padding-bottom: 1rem;
+  }
+}
